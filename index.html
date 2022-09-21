@@ -1,0 +1,75 @@
+  <!DOCTYPE html>
+  <html>
+  <link rel="stylesheet" id="xvstyles" href="https://static-l3.xvideos-cdn.com/v-2e6c8907114/v3/css/default/main.css">
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <body>
+    <div id="card">
+
+    </div>
+    <script>
+      fetch('https://api.codetabs.com/v1/proxy?quest=https://xvideos.com').then(
+      function(response) {
+
+        if (response.status !== 200) {
+          console.log('Looks like there was a problem. Status Code: ' +
+            response.status);
+          return;
+        }
+
+        // Examine the text in the response
+        response.text().then(function(data) {
+            // data contains all the plain html of the url you previously set, 
+            // you can use it as you want, it is typeof 
+            var array = [];
+
+            var subStr = "class=\"clearfix";
+            var index0 = data.indexOf(subStr);
+            var index1 = data.indexOf("<ul>", index0);
+            var result = data.substring(index0, index1);
+            //console.log(result);
+            var all = [];
+            var substr = 'id=\"video_';
+
+
+
+            var index = result.indexOf(substr);
+            while (index > -1) {
+              var first = result.substring(index-5);
+              var end = first.indexOf("<script>");
+              var final = result.substring(index, end);
+              document.getElementById("card").innerHTML +=final;
+              console.log(final);
+              index = result.indexOf(substr, index + 1);
+        }
+        /*
+        while (index > -1) {
+          var final = result.substring(index);
+          index = result.indexOf(substr, index + 1);
+          var pattern = /href=\"(.*?)\"/i;
+          var result1 = final.match(pattern)[1];
+          var src = /data-src=\"(.*?)\"/i;
+          var imgurl = final.match(src)[1];
+          var alldone = { "url": result1, "imgurl": imgurl };
+          all.push(alldone);
+
+        }*/
+      //  var jsonString = JSON.stringify(Object.assign({}, all));
+        // console.log(jsonString);
+     //   document.write(jsonString);
+        //  window.top.postMessage(jsonString,'*');
+
+
+
+      });
+      }
+      )
+      .catch(function(err) {
+        console.log('Fetch Error :-S', err);
+      });
+    </script>
+
+
+  </body>
+
+  </html
