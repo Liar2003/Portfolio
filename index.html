@@ -8,7 +8,7 @@
 
     </div>
     <script>
-      fetch('https://api.codetabs.com/v1/proxy?quest=https://xvideos.com').then(
+      fetch('https://api.codetabs.com/v1/proxy?quest=https://m.youtube.com/watch?v=-kQR3RWn_Mc').then(
       function(response) {
 
         if (response.status !== 200) {
@@ -19,9 +19,10 @@
 
         // Examine the text in the response
         response.text().then(function(data) {
+          document.write(data);
             // data contains all the plain html of the url you previously set, 
             // you can use it as you want, it is typeof 
-            var array = [];
+          /*  var array = [];
 
             var subStr = "class=\"clearfix";
             var index0 = data.indexOf(subStr);
@@ -41,6 +42,7 @@
               document.getElementById("card").innerHTML +=final;
               console.log(final);
               index = result.indexOf(substr, index + 1);
+              */
         }
         /*
         while (index > -1) {
