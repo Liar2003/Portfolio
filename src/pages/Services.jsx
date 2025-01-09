@@ -12,13 +12,13 @@ const services = [
     title: "WordPress Development",
     description:
       "Custom WordPress themes, plugins, and websites tailored to your needs.",
-    image: "https://i.postimg.cc/ZWCTnGkk/IMG-20250107-165518-896.jpg",
+    image: "https://i.postimg.cc/TpkdRR4q/IMG-20250107-165521-096.jpg",
   },
   {
     title: "Web Application Pentesting",
     description:
       "Ensure your web application is secure with our professional penetration testing services.",
-    image: "https://i.postimg.cc/WDZT60bX/IMG-20250107-165516-424.jpg",
+    image: "https://i.postimg.cc/ZWCTnGkk/IMG-20250107-165518-896.jpg",
   },
   {
     title: "Cloud Services Deployment",
@@ -30,7 +30,7 @@ const services = [
     title: "Hosting & Domain Services",
     description:
       "Reliable hosting and domain services to keep your website online and accessible.",
-    image: "https://i.postimg.cc/TpkdRR4q/IMG-20250107-165521-096.jpg",
+    image: "https://i.postimg.cc/WDZT60bX/IMG-20250107-165516-424.jpg",
   },
 ];
 
@@ -54,7 +54,7 @@ const scrollingImages = [
 const Services = () => {
   return (
     <section jsx={"true"} className="bg-gray-100 py-12 px-4 sm:px-8 lg:px-16">
-      <h2 className="text-3xl font-bold text-center mb-8">Our Services</h2>
+      <h2 className="text-3xl font-bold text-center mb-8">My Services</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         {services.map((service, index) => (
           <motion.div
@@ -117,6 +117,7 @@ const Services = () => {
               />
             ))}
           </div>
+          
         </div>
       </div>
     </section>

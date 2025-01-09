@@ -12,6 +12,7 @@ import {
 import { Hero } from "./Hero";
 import Navbar from "../components/NavBar";
 import Services from "./Services";
+import SkillsSection from "./SkillsSection";
 
 const PublicPage = () => {
   const navigate = useNavigate();
@@ -25,14 +26,14 @@ const PublicPage = () => {
   };
 
   return (
-    <div className="bg-gray-50">
-      <Navbar />
-
+    <div className="">
       {/* Hero Section */}
       <Hero />
 
       {/* Services Section */}
       <Services />
+      {/* Skills Section */}
+      <SkillsSection />
 
       {/* Contact Section */}
       <section
