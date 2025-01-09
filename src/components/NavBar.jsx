@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full backdrop-blur-md shadow-md z-10 px-4 py-4 flex items-center justify-between transition-colors duration-300 ${
+      className={` w-full backdrop-blur-md shadow-md z-10 px-4 py-4 flex items-center justify-between transition-colors duration-300 ${
         mode === "light"
           ? "bg-white/40 text-black"
           : "bg-gray-900/75 text-white"

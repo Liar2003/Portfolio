@@ -103,7 +103,7 @@ const Services = () => {
                 key={index}
                 src={image}
                 alt={`Scroll ${index}`}
-                className="w-24 h-24 rounded-full object-cover  hover:blur-none transition duration-300"
+                className="lg:w-24 lg:h-24 w-16 h-16 rounded-full object-cover  hover:blur-none transition duration-300"
               />
             ))}
           </div>
@@ -113,11 +113,10 @@ const Services = () => {
                 key={index}
                 src={image}
                 alt={`Scroll Reverse ${index}`}
-                className="w-24 h-24 rounded-full object-cover hover:blur-none transition duration-300"
+                className="lg:w-24 lg:h-24 w-16 h-16  rounded-full object-cover hover:blur-none transition duration-300"
               />
             ))}
           </div>
-          
         </div>
       </div>
     </section>
