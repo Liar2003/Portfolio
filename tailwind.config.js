@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       boxShadow: {
-        'bright-blue': '0 0 20px 5px #7dd3fc',
+        "bright-blue": "0 0 20px 5px #7dd3fc",
       },
       animation: {
         scroll: "scroll 10s linear infinite",

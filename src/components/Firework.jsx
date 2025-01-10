@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
+import { useSelector } from "react-redux";
 
 const Firework = () => {
+  const mode = useSelector((state) => state.theme.mode);
   const canvasRef = useRef(null);
   const duration = 8000; // Duration of each animation cycle
   const str = ["WELCOME"]; // Text to display
@@ -19,8 +21,12 @@ const Firework = () => {
       if (Math.random() < 0.03) {
         trails.push(generateFirework()); // Add new firework trail
       }
+      console.log(mode);
+      ctx.fillStyle =
+        mode === "dark" ? "rgba(0, 0, 0, 0.1)" : "rgb(243 ,244, 246, 0.2)";
 
-      ctx.fillStyle = "rgba(0, 0, 0, 0.1)"; // Fading trail effect
+      //ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+      //ctx.fillStyle = "rgba(255, 255, 255, 0.2)"; // Fading trail effect
       ctx.fillRect(0, 0, w, h);
 
       // Update trails
@@ -42,7 +48,7 @@ const Firework = () => {
       cancelAnimationFrame(animationFrame);
       window.removeEventListener("resize", initializeCanvas);
     };
-  }, []);
+  }, [mode]);
 
   const initializeCanvas = () => {
     const canvas = canvasRef.current;
@@ -194,9 +200,7 @@ const Firework = () => {
     ctx.fill();
   };
 
-  return (
-    <canvas ref={canvasRef} style={{ display: "block", background: "black" }} />
-  );
+  return <canvas ref={canvasRef} style={{ display: "block" }} />;
 };
 
 export default Firework;

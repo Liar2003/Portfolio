@@ -41,11 +41,11 @@ const PublicPage = () => {
       <ContactMe />
 
       {/* Footer */}
-      <footer className="bg-black text-white py-6 text-center  shadow-xl">
+      <footer className="dark:bg-black dark:text-white bg-slate-300 text-black py-6 text-center  shadow-xl">
         <p className="text-sm">
           &copy; 2025 Portfolio Page. All Rights Reserved.
         </p>
-        <p className="text-xs text-gray-300 mt-2">Made with ❤️ by Toewaioo</p>
+        <p className="text-xs text-gray-950 mt-2 dark:text-gray-350">Made with ❤️ by Toewaioo</p>
       </footer>
     </div>
   );

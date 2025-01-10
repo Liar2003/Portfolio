@@ -64,27 +64,27 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section className="lg:pl-32 lg:pr-20 pb-10 bg-black">
+    <section className="lg:pl-32 lg:pr-20 pb-10 bg-slate-100 dark:bg-black">
       <div className=" relative overflow-hidden">
         {/* Gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-r  from-black via-transparent to-black z-10 pointer-events-none "></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-100 via-transparent to-slate-100  dark:from-black dark:via-transparent dark:to-black z-10 pointer-events-none "></div>
 
         {/* Main content */}
         <div className="flex items-center justify-center flex-col space-y-6">
-          <h2 className="font-bold text-white text-center text-5xl tracking-tighter relative break-words line-clamp-2 m-5 ">
+          <h2 className="lg:font-bold text-grey-950 dark:text-slate-200 text-center text-3xl lg:text-5xl tracking-tighter relative break-words line-clamp-2 m-5 ">
             Powering your favorite <br></br>frameworks and tools
           </h2>
 
           {/* Flex container for squares */}
-          <div className=" flex  gap-6">
+          <div className=" flex  lg:gap-6 gap-3">
             {squares.map((_, index) => (
               <div
                 key={index}
-                className="w-20 h-20 border-solid border-1 border-gray-500 flex items-center justify-center bg-gray-800 rounded-lg transform transition-transform duration-200 hover:scale-110"
+                className=" lg:w-20 lg:h-20 w-16 h-16 border-solid border-[1px] dark:border-gray-500 flex items-center justify-center bg-gray-300 dark:bg-gray-950 rounded-lg transform transition-transform duration-200 hover:scale-110"
               ></div>
             ))}
           </div>
-          <div className="ml-24 flex  gap-6">
+          <div className="ml-24 flex lg:gap-6 gap-3">
             {squares.map((_, index) => (
               <ImageSquares
                 key={index}
@@ -94,7 +94,7 @@ const SkillsSection = () => {
               ></ImageSquares>
             ))}
           </div>
-          <div className="ml-36 flex  gap-6">
+          <div className="ml-36 flex  lg:gap-6 gap-3">
             {squares.map((_, index) => (
               <ImageSquares
                 key={index}
@@ -104,7 +104,7 @@ const SkillsSection = () => {
               ></ImageSquares>
             ))}
           </div>
-          <div className="ml-56 flex  gap-6">
+          <div className="ml-56 flex  lg:gap-6 gap-3">
             {squares.map((_, index) => (
               <ImageSquares
                 key={index}
@@ -114,11 +114,11 @@ const SkillsSection = () => {
               ></ImageSquares>
             ))}
           </div>
-          <div className=" flex  gap-6">
+          <div className=" flex  lg:gap-6 gap-3">
             {squares.map((_, index) => (
               <div
                 key={index}
-                className="w-20 h-20 border-solid border-1 border-gray-500 flex items-center justify-center bg-gray-800 rounded-lg transform transition-transform duration-200 hover:scale-110"
+                className="lg:w-20 lg:h-20 w-16 h-16 border-solid border-[1px] dark:border-gray-500 flex items-center justify-center  bg-gray-300 dark:bg-gray-950 rounded-lg transform transition-transform duration-200 hover:scale-110"
               ></div>
             ))}
           </div>
@@ -138,7 +138,7 @@ const ImageSquares = ({ index, indexs }) => {
 
   // Render this div if index is not included
   return (
-    <div className="w-20 h-20 border-solid border-1 border-gray-500 flex items-center justify-center bg-gray-800 rounded-lg transform transition-transform duration-200 hover:scale-110"></div>
+    <div className="lg:w-20 lg:h-20 w-16 border-solid border-[1px] dark:border-gray-500 flex items-center justify-center  bg-gray-300 dark:bg-gray-950 rounded-lg transform transition-transform duration-200 hover:scale-110"></div>
   );
 };
 
@@ -206,7 +206,7 @@ const ImageSquare = ({ imageUrl }) => {
 
   return (
     <div
-      className={`w-20 h-20 p-3 bg-slate-800  rounded-lg shadow-lg hover:scale-100 duration-200 hover:shadow-[0_0_20px_15px_#7dd3fc] transform transition-transform `}
+      className={`border-solid border-[1px] dark:border-gray-500 lg:w-20 lg:h-20 w-16 h-16 p-3  bg-gray-400 dark:bg-slate-950  rounded-lg shadow-lg hover:scale-100 duration-200 hover:shadow-[0_0_20px_15px_#7dd3fc] transform transition-transform `}
       style={{
         boxShadow: "none", // Default shadow is none
       }}

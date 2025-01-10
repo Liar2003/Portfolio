@@ -1,22 +1,45 @@
-import { useState } from "react";
-
-import { Provider, useDispatch, useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import Theme from "./Theme";
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const mode = useSelector((state) => state.theme.mode);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        // Scrolling down and past a threshold
+        setIsVisible(false);
+      } else {
+        // Scrolling up or near the top
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+  
 
   return (
     <nav
-      className={` w-full backdrop-blur-md shadow-md z-10 px-4 py-4 flex items-center justify-between transition-colors duration-300 ${
-        mode === "light"
-          ? "bg-white/40 text-black"
-          : "bg-gray-900/75 text-white"
+      className={`fixed top-0 w-full backdrop-blur-sm shadow-md z-10 px-4 py-4 flex items-center justify-between transition-transform duration-300 bg-gray-200 dark:bg-gray-900 dark:text-gray-400 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="text-xl font-bold">Portfolio</div>
       <div className="hidden md:flex items-center space-x-4">
-        <div className="flex items-center bg-white/40  rounded px-2 py-2">
+        <div className="flex items-center bg-white/100 dark:bg-white/20 rounded px-2 py-2">
           <input
             type="text"
             placeholder="Search..."
@@ -52,4 +75,5 @@ const Navbar = () => {
     </nav>
   );
 };
+
 export default Navbar;

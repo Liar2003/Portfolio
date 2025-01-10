@@ -53,7 +53,7 @@ const scrollingImages = [
 
 const Services = () => {
   return (
-    <section jsx={"true"} className="bg-gray-100 py-12 px-4 sm:px-8 lg:px-16">
+    <section jsx={"true"} className="bg-gray-100 py-12 px-4 sm:px-8 lg:px-16 dark:bg-black dark:text-white">
       <h2 className="text-3xl font-bold text-center mb-8">My Services</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         {services.map((service, index) => (
@@ -63,7 +63,7 @@ const Services = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="group relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+            className="group relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 dark:bg-neutral-900 dark:text-white"
           >
             <div className="relative overflow-hidden">
               <img
@@ -84,10 +84,10 @@ const Services = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <h3 className="text-xl text-center font-semibold mb-2 text-gray-800">
+              <h3 className="text-xl text-center font-semibold mb-2 text-gray-800 dark:text-white">
                 {service.title}
               </h3>
-              <p className="text-gray-600 text-center">{service.description}</p>
+              <p className="text-gray-600 text-center dark:text-gray-50">{service.description}</p>
             </motion.div>
           </motion.div>
         ))}
@@ -95,7 +95,7 @@ const Services = () => {
 
       {/* Scrolling Images Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-100 via-transparent to-gray-100 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-100 via-transparent to-gray-100 z-10 dark:from-black dark:via-transparent dark:to-black"></div>
         <div className="flex items-center justify-center flex-col space-y-6">
           <div className="flex space-x-6 animate-scroll row-scroll">
             {[...scrollingImages, ...scrollingImages].map((image, index) => (
