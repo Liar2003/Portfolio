@@ -21,7 +21,7 @@ const Firework = () => {
       if (Math.random() < 0.03) {
         trails.push(generateFirework()); // Add new firework trail
       }
-      console.log(mode);
+     
       ctx.fillStyle =
         mode === "dark" ? "rgba(0, 0, 0, 0.1)" : "rgb(243 ,244, 246, 0.2)";
 

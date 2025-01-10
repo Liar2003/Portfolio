@@ -45,7 +45,7 @@ const PublicPage = () => {
         <p className="text-sm">
           &copy; 2025 Portfolio Page. All Rights Reserved.
         </p>
-        <p className="text-xs text-gray-950 mt-2 dark:text-gray-350">Made with ❤️ by Toewaioo</p>
+        <p className="text-xs text-gray-950 mt-2 dark:text-gray-350 dark:text-gray-500">Made with ❤️ by Toewaioo</p>
       </footer>
     </div>
   );
