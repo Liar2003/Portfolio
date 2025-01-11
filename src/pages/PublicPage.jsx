@@ -10,10 +10,11 @@ import {
   Linkedin,
 } from "@styled-icons/fa-brands";
 import { Hero } from "./Hero";
-import Navbar from "../components/NavBar";
+
 import Services from "./Services";
 import SkillsSection from "./SkillsSection";
 import ContactMe from "./ContactMe";
+import Navbar from "../layout/Navbar";
 
 const PublicPage = () => {
   const navigate = useNavigate();

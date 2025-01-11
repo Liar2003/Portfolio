@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Provider } from "react-redux";
 import App from "./App";
+//
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import createAppStore from "./redux/store";
 import Navbar from "./components/NavBar";
@@ -25,6 +28,12 @@ const AppContainer = () => {
 
     initializeStore();
   }, []);
+  useEffect(() => {
+    Aos.init({
+      duration: 1800,
+      offset: 100,
+    });
+  }, []);
   if (loading || error) {
     return (
       <div className="flex items-center justify-center h-screen">
@@ -35,7 +44,6 @@ const AppContainer = () => {
   return (
     <Provider store={store}>
       <div className="flex flex-col min-h-screen">
-       
         <App />
       </div>
     </Provider>

@@ -35,12 +35,12 @@ const Theme = () => {
     <div className="relative">
       {/* Theme button */}
       <button
-        className="flex items-center space-x-2 px-4 py-2  transition"
+        className="flex items-center transition"
         onClick={() => setIsListVisible((prev) => !prev)} // Toggle list visibility
       >
-        <span className="flex space-x-1">
+        <span className="flex">
           <svg
-            className={`${mode == "dark" ? "hidden" : ""} w-6 h-6`}
+            className={`${mode == "dark" ? "hidden" : ""} w-9 h-9 ml-0`}
             viewBox="0 0 24 24"
             fill="none"
             strokeWidth="2"
@@ -57,7 +57,7 @@ const Theme = () => {
             ></path>
           </svg>
           <svg
-            className={`${mode == "light" ? "hidden" : "w-6 h-6"}`}
+            className={`${mode == "light" ? "hidden" : "w-8 h-8"} ml-0`}
             viewBox="0 0 24 24"
             fill="none"
           >
@@ -85,13 +85,13 @@ const Theme = () => {
             mode === "light" ? " text-black" : " text-white"
           }text-gray-700`}
         >
-          Theme
+        
         </span>
       </button>
 
       {/* Dropdown list */}
       {isListVisible && (
-        <div className="absolute right-0 mt-2 w-28 bg-white dark:bg-gray-500 text-black dark:text-gray-100 rounded-md shadow-lg z-10">
+        <div className="absolute left-0 mt-2 w-28 bg-white dark:bg-gray-500 text-black dark:text-gray-100 rounded-md shadow-lg z-10">
           <ul className="py-2 ">
             <li
               onClick={() => handleThemeChange("light")}

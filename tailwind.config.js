@@ -3,6 +3,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx,tsx}"],
   darkMode: "class",
   theme: {
+    fontFamily: {
+      Poppins: "Poppins",
+      Paprika: "Paprika",
+      Inria: "Inria Serif",
+    },
     extend: {
       boxShadow: {
         "bright-blue": "0 0 20px 5px #7dd3fc",

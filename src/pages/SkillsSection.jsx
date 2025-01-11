@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { content } from "../Content";
 
 const SkillsSection = () => {
   const rows = 5;
@@ -11,72 +12,30 @@ const SkillsSection = () => {
     "https://vite.dev/assets/react.Dn3lPOaa.svg",
     ,
   ];
-  const indexList = [
-    {
-      12: "https://iili.io/2r36zXe.th.png",
-    },
-    {
-      13: "https://react.dev/images/brand/logo_light.svg",
-    },
-    {
-      14: "https://iili.io/2r38HzJ.md.png",
-    },
-    {
-      15: "https://iili.io/2r3gdsj.png",
-    },
-  ];
-  const indexList2 = [
-    {
-      11: "https://iili.io/2r3pazx.png",
-    },
-    {
-      12: "https://iili.io/2rFHazG.png",
-    },
-    {
-      13: "https://iili.io/2rFJdQf.png",
-    },
-    {
-      14: "https://iili.io/2rFJm6Q.png",
-    },
-    {
-      15: "https://iili.io/2rF2kBf.png",
-    },
-    {
-      16: "https://nuxt.com/assets/design-kit/icon-green.png",
-    },
-  ];
-  const indexList3 = [
-    {
-      11: "https://iili.io/2rFfyKJ.png",
-    },
-    {
-      12: "https://iili.io/2rFBaII.png",
-    },
-    {
-      13: "https://iili.io/2rFCO9R.md.png",
-    },
-    {
-      14: "https://iili.io/2rFod1n.png",
-    },
-    {
-      15: "https://iili.io/2rFxBaa.png",
-    },
-  ];
+  const { frameworks } = content;
 
   return (
-    <section className="lg:pl-32 lg:pr-20 pb-10 bg-slate-100 dark:bg-black">
+    <section
+      id="skills"
+      className="lg:pl-32 lg:pr-20 pb-10 bg-slate-100 dark:bg-black"
+    >
       <div className=" relative overflow-hidden">
         {/* Gradient background */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-100 via-transparent to-slate-100  dark:from-black dark:via-transparent dark:to-black z-10 pointer-events-none "></div>
-
         {/* Main content */}
-        <div className="flex items-center justify-center flex-col space-y-6">
-          <h2 className="lg:font-bold text-grey-950 dark:text-slate-200 text-center text-3xl lg:text-5xl tracking-tighter relative break-words line-clamp-2 m-5 ">
-            Powering your favorite <br></br>frameworks and tools
-          </h2>
+        <h4
+          data-aos="fade-down"
+          className="lg:font-bold text-grey-950 dark:text-slate-200 text-center text-3xl lg:text-5xl tracking-tighter relative break-words line-clamp-2 m-5 "
+        >
+          Powering your favorite <br></br>frameworks and tools
+        </h4>
 
+        <div
+          className="flex items-center justify-center flex-col space-y-6"
+          data-aos="zoom-in"
+        >
           {/* Flex container for squares */}
-          <div className=" flex  lg:gap-6 gap-3">
+          <div className=" flex  lg:gap-6 gap-3 ">
             {squares.map((_, index) => (
               <div
                 key={index}
@@ -89,7 +48,7 @@ const SkillsSection = () => {
               <ImageSquares
                 key={index}
                 index={index}
-                indexs={indexList}
+                indexs={frameworks.indexList}
                 // Loop if fewer URLs
               ></ImageSquares>
             ))}
@@ -99,7 +58,7 @@ const SkillsSection = () => {
               <ImageSquares
                 key={index}
                 index={index}
-                indexs={indexList2}
+                indexs={frameworks.indexList2}
                 // Loop if fewer URLs
               ></ImageSquares>
             ))}
@@ -109,7 +68,7 @@ const SkillsSection = () => {
               <ImageSquares
                 key={index}
                 index={index}
-                indexs={indexList3}
+                indexs={frameworks.indexList3}
                 // Loop if fewer URLs
               ></ImageSquares>
             ))}

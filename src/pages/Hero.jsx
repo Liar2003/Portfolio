@@ -13,7 +13,7 @@ import { useSelector } from "react-redux";
 export const Hero = () => {
   const mode = useSelector((state) => state.theme.mode);
   return (
-    <section className="relative h-screen text-white overflow-hidden">
+    <section id="home" className="relative h-screen text-white overflow-hidden">
       {/* Fireworks Background */}
       <div className="absolute inset-0 z-0">
         <Firework />
@@ -22,7 +22,7 @@ export const Hero = () => {
       {/* Main Content */}
       <div className="relative w-full lg:h-[100vh] h-[90vh] ">
         <div className="absolute bottom-0 w-full dark:text-white px-4 py-2 text-center">
-          <a className="flex items-center justify-center" href="__blank">
+          <a className="flex items-center justify-center" data-aos="slide-left">
             <img
               className="items-center justify-center"
               src="https://iili.io/2UwZDb4.png"
@@ -32,7 +32,7 @@ export const Hero = () => {
           </a>
 
           <Typist className="text-black dark:text-white flex item-center  justify-center text-lg  px-4 sm:px-6 md:px-10 lg:mx-52  text-center animate__animated animate__fadeIn animate__delay-1s ">
-            <p className="">
+            <p className=" text-center lg:mt-2">
               Hello, I'm {""}
               <span className="font-bold text-blue-500 w-full ">
                 Toewaioo
