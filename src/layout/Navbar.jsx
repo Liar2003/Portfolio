@@ -3,6 +3,7 @@ import { content } from "../Content";
 import { createElement } from "react";
 import { Settings } from "@styled-icons/material-rounded";
 import Theme from "../components/Theme";
+import { Menu2 } from "@styled-icons/remix-fill";
 
 const Navbar = () => {
   const { nav } = content;
@@ -42,7 +43,7 @@ const Navbar = () => {
         } sm:cursor-pointer fixed gap-3 flex top-5 left-5 lg:left-10 z-[999] rounded-lg bg-slate-900 dark:bg-white/50 p-2`}
         onClick={() => setShowMenu(!showMenu)}
       >
-        <Settings className="text-sky-500" size={32} />
+        <Menu2 className="text-sky-500" size={32} />
         <Theme />
       </div>
       <nav
@@ -52,6 +53,7 @@ const Navbar = () => {
       >
         {nav.map((item, i) => (
           <a
+            key={i}
             href={item.link}
             onClick={() => setActive(i)}
             className={`w-10 h-10 text-xl p-2.5 rounded-full sm:cursor-pointer flex items-center

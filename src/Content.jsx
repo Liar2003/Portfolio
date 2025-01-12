@@ -24,7 +24,18 @@ import emberjs from "./assets/images/services/emberjs.png";
 import { Instagram, Telegram } from "@styled-icons/fa-brands";
 
 import { User } from "@styled-icons/fa-solid";
-import { Contacts, Home5, Mail, Projector, Service } from "@styled-icons/remix-fill";
+import {
+  Contacts,
+  Home5,
+  Mail,
+  Projector,
+  Service,
+} from "@styled-icons/remix-fill";
+//
+import avatar1 from "./assets/images/Testimonials/avatar1.png";
+import avatar2 from "./assets/images/Testimonials/avatar2.png";
+import avatar3 from "./assets/images/Testimonials/avatar3.png";
+import avatar4 from "./assets/images/Testimonials/avatar4.png";
 
 export const content = {
   nav: [
@@ -49,6 +60,87 @@ export const content = {
       icon: Contacts,
     },
   ],
+  Testimonials: {
+    title: "Testimonials",
+    subtitle: "MY CLIENT REVIEWS",
+    testimonials_content: [
+      {
+        review:
+          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
+        img: avatar1,
+        name: "JOHN DOE",
+      },
+      {
+        review:
+          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
+        img: avatar2,
+        name: "Tom Alex",
+      },
+      {
+        review:
+          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
+        img: avatar3,
+        name: "Johnny",
+      },
+      {
+        review:
+          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
+        img: avatar4,
+        name: "ROBBIN",
+      },
+    ],
+  },
+  projects: {
+    title: "Projects",
+    subtitle: "MY CREATIONS",
+    content: [
+      {
+        id: 1,
+        title: "Project 1",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illo, unde, natus aperiam deserunt aliquid eum tempore laborum explicabo itaque quasi maxime. Quos totam, quidem libero molestias harum ex. Maiores!",
+        image: "https://placehold.co/600x400?text=Project+1",
+        githubLink: "https://github.com",
+        demo: "https://demo.dev",
+      },
+      {
+        id: 2,
+        title: "Project 2",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illo, unde, natus aperiam deserunt aliquid eum tempore laborum explicabo itaque quasi maxime. Quos totam, quidem libero molestias harum ex. Maiores!",
+        image: "https://placehold.co/600x400?text=Project+2",
+        githubLink: "https://github.com",
+        demo: "https://demo.dev",
+      },
+      {
+        id: 3,
+        title: "Project 3",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illo, unde, natus aperiam deserunt aliquid eum tempore laborum explicabo itaque quasi maxime. Quos totam, quidem libero molestias harum ex. Maiores!",
+        image: "https://placehold.co/600x400?text=Project+3",
+        githubLink: "https://github.com",
+        demo: "https://demo.dev",
+      },
+      {
+        id: 4,
+        title: "Project 4",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illo, unde, natus aperiam deserunt aliquid eum tempore laborum explicabo itaque quasi maxime. Quos totam, quidem libero molestias harum ex. Maiores!",
+        image: "https://placehold.co/600x400?text=Project+4",
+        githubLink: "https://github.com",
+        demo: "https://demo.dev",
+      },
+      {
+        id: 5,
+        title: "Project 5",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illo, unde, natus aperiam deserunt aliquid eum tempore laborum explicabo itaque quasi maxime. Quos totam, quidem libero molestias harum ex. Maiores!",
+        image: "https://placehold.co/600x400?text=Project+5",
+        githubLink: "https://github.com",
+        demo: "https://demo.dev",
+      },
+    ],
+  },
   frameworks: {
     title: "FrameWork",
     subtitle: "",

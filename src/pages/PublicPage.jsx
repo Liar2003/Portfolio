@@ -15,6 +15,8 @@ import Services from "./Services";
 import SkillsSection from "./SkillsSection";
 import ContactMe from "./ContactMe";
 import Navbar from "../layout/Navbar";
+import ProjectsSection from "./ProjectsSection";
+import Testimonials from "./Testimonials";
 
 const PublicPage = () => {
   const navigate = useNavigate();
@@ -37,7 +39,10 @@ const PublicPage = () => {
       <Services />
       {/* Skills Section */}
       <SkillsSection />
-
+      {/* //Projects Section */}
+      <ProjectsSection />
+      {/* Feedbacks */}
+      <Testimonials />
       {/* Contact Section */}
       <ContactMe />
 
@@ -46,7 +51,9 @@ const PublicPage = () => {
         <p className="text-sm">
           &copy; 2025 Portfolio Page. All Rights Reserved.
         </p>
-        <p className="text-xs text-gray-950 mt-2 dark:text-gray-350 dark:text-gray-500">Made with ❤️ by Toewaioo</p>
+        <p className="text-xs text-gray-950 mt-2 dark:text-gray-350 dark:text-gray-500">
+          Made with ❤️ by Toewaioo
+        </p>
       </footer>
     </div>
   );

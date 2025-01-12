@@ -22,7 +22,7 @@ export const Hero = () => {
       {/* Main Content */}
       <div className="relative w-full lg:h-[100vh] h-[90vh] ">
         <div className="absolute bottom-0 w-full dark:text-white px-4 py-2 text-center">
-          <a className="flex items-center justify-center" data-aos="slide-left">
+          <a className="flex items-center justify-center" data-aos="fade-up">
             <img
               className="items-center justify-center"
               src="https://iili.io/2UwZDb4.png"
@@ -54,7 +54,7 @@ export const Hero = () => {
             <p>Connect with me on your favorite platform!</p>
           </Typist>
 
-          <div className=" mt-3 lg:mb-3 flex justify-center space-x-6 ">
+          <div className=" mt-3 lg:mb-3 flex justify-center space-x-6" data-aos="fade-up">
             <a
               href="https://t.me/TwowT2"
               target="_blank"

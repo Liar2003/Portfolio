@@ -12,7 +12,8 @@ const SkillsSection = () => {
     "https://vite.dev/assets/react.Dn3lPOaa.svg",
     ,
   ];
-  const { frameworks } = content;
+  const { frameworks, skills } = content;
+  const scrollingImages = skills.content;
 
   return (
     <section
@@ -80,6 +81,35 @@ const SkillsSection = () => {
                 className="lg:w-20 lg:h-20 w-16 h-16 border-solid border-[1px] dark:border-gray-500 flex items-center justify-center  bg-gray-300 dark:bg-gray-950 rounded-lg transform transition-transform duration-200 hover:scale-110"
               ></div>
             ))}
+          </div>
+        </div>
+      </div>
+      <div className="relative overflow-hidden mt-10" data-aos="fade-up">
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-100 via-transparent to-gray-100 z-10 dark:from-black dark:via-transparent dark:to-black"></div>
+        <div className="flex items-center justify-center flex-col space-y-6">
+          <div className="flex space-x-6 animate-scroll row-scroll">
+            {[...scrollingImages, ...scrollingImages, ...scrollingImages].map(
+              (image, index) => (
+                <img
+                  key={index}
+                  src={image.logo}
+                  alt={`Scroll ${index}`}
+                  className="lg:w-18 lg:h-18 w-14 h-14 rounded-full object-cover  hover:blur-none transition duration-300"
+                />
+              )
+            )}
+          </div>
+          <div className="flex space-x-6 animate-scroll-reverse row-scroll">
+            {[...scrollingImages, ...scrollingImages, ...scrollingImages].map(
+              (image, index) => (
+                <img
+                  key={index}
+                  src={image.logo}
+                  alt={`Scroll Reverse ${index}`}
+                  className="lg:w-18 lg:h-18 w-14 h-14  rounded-full object-cover hover:blur-none transition duration-300"
+                />
+              )
+            )}
           </div>
         </div>
       </div>
@@ -158,7 +188,6 @@ const ImageSquare = ({ imageUrl }) => {
     r = Math.round(r / count);
     g = Math.round(g / count);
     b = Math.round(b / count);
-    console.log(r + ":" + b + ":" + g);
 
     return `rgb(${r}, ${g}, ${b})`;
   };

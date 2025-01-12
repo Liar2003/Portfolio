@@ -70,35 +70,7 @@ const Services = () => {
       </div>
 
       {/* Scrolling Images Section */}
-      <div className="relative overflow-hidden" data-aos="fade-up">
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-100 via-transparent to-gray-100 z-10 dark:from-black dark:via-transparent dark:to-black"></div>
-        <div className="flex items-center justify-center flex-col space-y-6">
-          <div className="flex space-x-6 animate-scroll row-scroll">
-            {[...scrollingImages, ...scrollingImages, ...scrollingImages].map(
-              (image, index) => (
-                <img
-                  key={index}
-                  src={image.logo}
-                  alt={`Scroll ${index}`}
-                  className="lg:w-20 lg:h-20 w-16 h-16 rounded-full object-cover  hover:blur-none transition duration-300"
-                />
-              )
-            )}
-          </div>
-          <div className="flex space-x-6 animate-scroll-reverse row-scroll">
-            {[...scrollingImages, ...scrollingImages, ...scrollingImages].map(
-              (image, index) => (
-                <img
-                  key={index}
-                  src={image.logo}
-                  alt={`Scroll Reverse ${index}`}
-                  className="lg:w-20 lg:h-20 w-16 h-16  rounded-full object-cover hover:blur-none transition duration-300"
-                />
-              )
-            )}
-          </div>
-        </div>
-      </div>
+      
     </section>
   );
 };
